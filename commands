@@ -3,7 +3,7 @@
 Execute this at project level:
 ----------------------------------------
 
-dir  /B  /S  src\com\*.java > src1.txt
+dir  /B  /S  src\*.java > src1.txt
 type src1.txt
 javac --module-path bin -d bin @src1.txt
 jar -c -f bin\hello.jar -C bin .
