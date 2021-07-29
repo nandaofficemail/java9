@@ -5,9 +5,9 @@ Execute this at project level:
 
 firstproject > dir  /B  /S  src\*.java > src1.txt
 type src1.txt
-javac -d bin @src1.txt
-jar -c -f bin\hello.jar -C bin .
-jar -xvf bin\hello.jar
+javac -d bin @src1.txt  ( Put the output in bin folder )
+jar -c -f bin\hello.jar -C bin . ( jar all the files in bin folder to bin/hello.jar )
+jar -xvf bin\hello.jar  ( see the jar file )
 
 
 otherproject > javac --module-path ..\firstproject\bin\hello.jar -d bin @src1.txt
