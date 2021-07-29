@@ -7,3 +7,4 @@ dir  /B  /S  src\*.java > src1.txt
 type src1.txt
 javac --module-path bin -d bin @src1.txt
 jar -c -f bin\hello.jar -C bin .
+jar -xvf bin\hello.jar
