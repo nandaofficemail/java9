@@ -8,3 +8,7 @@ type src1.txt
 javac --module-path bin -d bin @src1.txt
 jar -c -f bin\hello.jar -C bin .
 jar -xvf bin\hello.jar
+
+
+otherproject > javac --module-path ..\firstproject\bin\hello.jar -d bin @src1.txt
+java -Dfile.encoding=Cp1252 -p "E:\samplecode\interview\otherproject\bin\hello.jar;E:\samplecode\interview\otherproject\bin" -m depproject2(other project module name)/com.profile.main.MainClass
